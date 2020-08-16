@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sign Up Page</title>
+  </head>
+  <body>
+    <main>
+      <!-- Sign up form -->
+      <form id="signup" onsubmit="return checkForm(this);" novalidate>
+        <legend>Sign Up</legend>
+        <label for="username">Username</label>
+        <input type="text" id="username" />
+        <span class="error username" aria-live="polite"></span>
+
+        <label for="pwd1">Password</label>
+        <input type="password" id="pwd1" />
+        <span class="error pwd1" aria-live="polite"></span>
+
+        <label for="pwd2">Confirm Password</label>
+        <input type="password" id="pwd2" />
+        <span class="error pwd2" aria-live="polite"></span>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" />
+        <span class="error email" aria-live="polite"></span>
+
+        <div class="btn-submit">
+          <input type="submit" value="SIGN UP" />
+        </div>
+        <span class="terms"
+          >By registering, you accept our
+          <a href="http://">terms and conditions</a>
+        </span>
+        <div class="social">
+          <span class="socialtext">OR SIGN UP WITH</span>
+          <div class="socialicons">
+            <span class="iconitem"
+              ><img src="./assets/facebook.svg" alt="facebook icon"
+            /></span>
+            <span class="iconitem"
+              ><img src="./assets/twitter.svg" alt="twitter icon"
+            /></span>
+            <span class="iconitem"
+              ><img src="./assets/pinterest.svg" alt="pinterest icon"
+            /></span>
+          </div>
+        </div>
+        <div class="signin">
+          <p>ALREADY HAVE AN ACCOUNT?</p>
+          <p>CLICK HERE TO <a href="#/" id="loginlink">SIGN IN</a></p>
+        </div>
+      </form>
+      <!-- Login form -->
+      <form
+        id="login"
+        class="hide"
+        onsubmit="return checkLoginForm(this);"
+        novalidate
+      >
+        <legend>Login</legend>
+        <label for="username">Username</label>
+        <input type="text" id="username" />
+        <span class="error username" aria-live="polite"></span>
+
+        <label for="pwd1">Password</label>
+        <input type="password" id="pwd1" />
+        <span class="error password" aria-live="polite"></span>
+
+        <div class="btn-submit">
+          <input type="submit" value="LOG IN" />
+        </div>
+
+        <div class="social">
+          <span class="socialtext">OR SIGN IN WITH</span>
+          <div class="socialicons">
+            <span class="iconitem"
+              ><img src="./assets/facebook.svg" alt="facebook icon"
+            /></span>
+            <span class="iconitem"
+              ><img src="./assets/twitter.svg" alt="twitter icon"
+            /></span>
+            <span class="iconitem"
+              ><img src="./assets/pinterest.svg" alt="pinterest icon"
+            /></span>
+          </div>
+        </div>
+        <div class="signin">
+          <p>DON'T HAVE AN ACCOUNT YET?</p>
+          <p>CLICK HERE TO <a href="#/" id="signuplink">SIGN UP</a></p>
+        </div>
+      </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
